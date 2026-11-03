@@ -52,10 +52,22 @@ const doMultipleTimes = (action, numTimes) => {
 
 //doMultipleTimes(() => 'Hello',10);
 
-let powerofTwo = 1;
+/*let powerofTwo = 1;
 doMultipleTimes(() => {
   const currpower = powerofTwo;
   powerofTwo *= 2;
   return currpower;
 }, 10);
+*/
+
+const powerFactory = (num) => {
+  let powerofTwo = num;
+  return () => {
+    const currpower = powerofTwo;
+    powerofTwo *= 2;
+    return currpower;
+  };
+};
+doMultipleTimes(powerFactory(2), 4);
+doMultipleTimes(powerFactory(1), 4);
 
