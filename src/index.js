@@ -40,7 +40,7 @@ const doMultipleTimes = (action, numTimes) => {
     //uncomment for anonymous callback
     //action();
     //uncomment this for function callback
-  }
+  };
 };
 //doMultipleTimes(randomnum, 10);
 //doMultipleTimes(classGreeting,10);
